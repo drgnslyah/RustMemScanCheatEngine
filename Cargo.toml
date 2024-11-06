@@ -1,0 +1,12 @@
+[package]
+name = "RustMemScanCheatEngine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+winapi = { version = "0.3.9", features = [
+    "psapi",           # For process enumeration and module name functions
+    "processthreadsapi",  # For OpenProcess
+    "handleapi",       # For CloseHandle
+    "winnt"            # For permissions like PROCESS_QUERY_INFORMATION
+] }
